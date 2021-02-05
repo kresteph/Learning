@@ -1,0 +1,76 @@
+/* Variablen */
+
+@Weiss: #ffffff;
+@tpadding: 3em;
+@mainw: 60vw;
+@asidew: 10vw - @tpadding ;
+@logow: 10vw - @tpadding;
+@section: @mainw - @asidew - @tpadding;
+
+.block{
+    display: inline-block;
+    height: 100vh - 20em;
+}
+
+.textpadding{ padding: 1em;}
+
+
+/* CSS */
+
+html, body { 
+    height: 100%;
+    background: grey; 
+    }
+
+header {
+    logo{
+        float: left;
+        width: @logow;
+        .textpadding();
+    }
+    nav{
+        float: right;
+        width: @mainw - @logow - @tpadding;
+        .textpadding();
+    }
+}
+
+main {
+    width: @mainw;
+    margin: 0 auto;
+    background: white;
+    position: relative;
+    clear: both;
+    
+    section {
+        float: left;
+        width: @section;
+        .block();
+        .textpadding();
+    }
+    article {
+    
+    }
+    aside{
+        float: right;
+        width: @asidew;
+        .block();
+        .textpadding();
+    }
+}
+
+
+footer {
+   display: inline-block;
+   height: 5em;
+   width: @mainw - @tpadding;
+    clear: both;
+    .textpadding();
+}
+
+/* Allgemein */
+
+* {
+    margin: 0;
+    padding: 0;
+}
